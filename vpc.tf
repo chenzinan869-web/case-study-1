@@ -16,9 +16,9 @@ resource "aws_vpc" "main" {
 # -----------------------------
 resource "aws_subnet" "public" {
   vpc_id                  = aws_vpc.main.id
-  cidr_block               = var.public_subnet_cidr
-  availability_zone        = var.availability_zone
-  map_public_ip_on_launch  = true
+  cidr_block              = var.public_subnet_cidr
+  availability_zone       = var.availability_zone
+  map_public_ip_on_launch = true
 
   tags = {
     Name = "${var.project_name}-public-subnet"
@@ -30,9 +30,9 @@ resource "aws_subnet" "public" {
 # needs this second public subnet for its own availability requirement.
 resource "aws_subnet" "public_b" {
   vpc_id                  = aws_vpc.main.id
-  cidr_block               = "10.0.4.0/24"
-  availability_zone        = var.availability_zone_b
-  map_public_ip_on_launch  = true
+  cidr_block              = "10.0.4.0/24"
+  availability_zone       = var.availability_zone_b
+  map_public_ip_on_launch = true
 
   tags = {
     Name = "${var.project_name}-public-subnet-b"
