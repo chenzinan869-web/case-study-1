@@ -15,10 +15,6 @@ jobs:
     runs-on: self-hosted # REQ-NCA-P1-07: self-hosted runner
     env:
       AWS_PROFILE: nca
-      TF_VAR_db_password: ${{ secrets.TF_VAR_DB_PASSWORD }}
-      TF_VAR_alarm_email: ${{ secrets.TF_VAR_ALARM_EMAIL }}
-      TF_VAR_db_password: ${{ secrets.TF_DB_PASSWORD }}
-      TF_VAR_alarm_email: ${{ secrets.TF_ALARM_EMAIL }}
 
     steps:
       - name: Checkout code
@@ -42,4 +38,3 @@ jobs:
         run: terraform apply -auto-approve tfplan
         # Only applies automatically on a direct push/merge to main —
         # pull requests only get a plan, never an auto-apply.
-
