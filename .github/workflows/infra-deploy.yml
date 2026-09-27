@@ -1,6 +1,3 @@
-cat /home/claude/terraform-nca/.github/workflows/infra-deploy.yml
-Output
-
 name: Infra Plan & Apply
 
 on:
@@ -45,3 +42,4 @@ jobs:
         run: terraform apply -auto-approve tfplan
         # Only applies automatically on a direct push/merge to main —
         # pull requests only get a plan, never an auto-apply.
+
