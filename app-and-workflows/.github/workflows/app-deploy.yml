@@ -1,0 +1,55 @@
+name: App Build & Deploy
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "app/**"
+  workflow_dispatch: {} # allows manually triggering a run for the demo
+
+env:
+  AWS_REGION: eu-central-1
+  AWS_PROFILE: nca
+  ECR_REPOSITORY: nca-web
+  ECS_CLUSTER: nca-cluster
+  ECS_SERVICE: nca-service
+
+jobs:
+  build-and-deploy:
+    runs-on: self-hosted # REQ-NCA-P1-07: self-hosted runner
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Get ECR login
+        run: |
+          aws ecr get-login-password --region $env:AWS_REGION | docker login --username AWS --password-stdin "$(aws sts get-caller-identity --query Account --output text).dkr.ecr.$env:AWS_REGION.amazonaws.com"
+
+      - name: Build image
+        run: |
+          $env:IMAGE_TAG = $env:GITHUB_SHA.Substring(0,7)
+          $env:ECR_URI = "$(aws sts get-caller-identity --query Account --output text).dkr.ecr.$env:AWS_REGION.amazonaws.com/$env:ECR_REPOSITORY"
+          docker build -t "${env:ECR_URI}:${env:IMAGE_TAG}" -t "${env:ECR_URI}:latest" ./app
+          echo "ECR_URI=$env:ECR_URI" >> $env:GITHUB_ENV
+          echo "IMAGE_TAG=$env:IMAGE_TAG" >> $env:GITHUB_ENV
+
+      - name: Push image to ECR
+        run: |
+          docker push "${env:ECR_URI}:${env:IMAGE_TAG}"
+          docker push "${env:ECR_URI}:latest"
+
+      - name: Deploy new image to ECS
+        run: |
+          # Fetch the current task definition, swap in the new image, register a new revision
+          $taskDefArn = aws ecs describe-services --cluster $env:ECS_CLUSTER --services $env:ECS_SERVICE --query "services[0].taskDefinition" --output text
+          $taskDefJson = aws ecs describe-task-definition --task-definition $taskDefArn --query "taskDefinition" | ConvertFrom-Json
+          $taskDefJson.containerDefinitions[0].image = "${env:ECR_URI}:${env:IMAGE_TAG}"
+          $newTaskDef = $taskDefJson | Select-Object -Property family,containerDefinitions,networkMode,requiresCompatibilities,cpu,memory,executionRoleArn
+          $newTaskDef | ConvertTo-Json -Depth 20 | Out-File -Encoding utf8 new-task-def.json
+          $newArn = aws ecs register-task-definition --cli-input-json file://new-task-def.json --query "taskDefinition.taskDefinitionArn" --output text
+          aws ecs update-service --cluster $env:ECS_CLUSTER --service $env:ECS_SERVICE --task-definition $newArn --force-new-deployment
+
+      - name: Wait for service to stabilize
+        run: |
+          aws ecs wait services-stable --cluster $env:ECS_CLUSTER --services $env:ECS_SERVICE

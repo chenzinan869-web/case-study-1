@@ -1,0 +1,1624 @@
+[2026-09-26 22:09:25Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Bin': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner\bin'
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Root': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner'
+[2026-09-26 22:09:25Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner\.credentials'
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Bin': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner\bin'
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Root': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner'
+[2026-09-26 22:09:25Z INFO HostContext] Well known config file 'Runner': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner\.runner'
+[2026-09-26 22:09:25Z INFO Worker] Version: 2.337.0
+[2026-09-26 22:09:25Z INFO Worker] Commit: 397b032cbf865e9c3ddfab89d533ec19325e1273
+[2026-09-26 22:09:25Z INFO Worker] Culture: nl-NL
+[2026-09-26 22:09:25Z INFO Worker] UI Culture: nl-NL
+[2026-09-26 22:09:25Z INFO Worker] Waiting to receive the job message from the channel.
+[2026-09-26 22:09:25Z INFO ProcessChannel] Receiving message of length 26554, with hash '3e1ede5970c39c9c50742acc88a80f81ee6898942378e01d4c2e0118acdbca8b'
+[2026-09-26 22:09:25Z INFO Worker] Message received.
+[2026-09-26 22:09:25Z INFO Worker] Job message:
+ {
+  "environmentVariables": [
+    {
+      "type": 2,
+      "file": 1,
+      "line": 11,
+      "col": 3,
+      "map": [
+        {
+          "key": {
+            "type": 0,
+            "file": 1,
+            "line": 11,
+            "col": 3,
+            "lit": "AWS_REGION"
+          },
+          "value": {
+            "type": 0,
+            "file": 1,
+            "line": 11,
+            "col": 15,
+            "lit": "eu-central-1"
+          }
+        },
+        {
+          "key": {
+            "type": 0,
+            "file": 1,
+            "line": 12,
+            "col": 3,
+            "lit": "AWS_PROFILE"
+          },
+          "value": {
+            "type": 0,
+            "file": 1,
+            "line": 12,
+            "col": 16,
+            "lit": "nca"
+          }
+        },
+        {
+          "key": {
+            "type": 0,
+            "file": 1,
+            "line": 13,
+            "col": 3,
+            "lit": "ECR_REPOSITORY"
+          },
+          "value": {
+            "type": 0,
+            "file": 1,
+            "line": 13,
+            "col": 19,
+            "lit": "nca-web"
+          }
+        },
+        {
+          "key": {
+            "type": 0,
+            "file": 1,
+            "line": 14,
+            "col": 3,
+            "lit": "ECS_CLUSTER"
+          },
+          "value": {
+            "type": 0,
+            "file": 1,
+            "line": 14,
+            "col": 16,
+            "lit": "nca-cluster"
+          }
+        },
+        {
+          "key": {
+            "type": 0,
+            "file": 1,
+            "line": 15,
+            "col": 3,
+            "lit": "ECS_SERVICE"
+          },
+          "value": {
+            "type": 0,
+            "file": 1,
+            "line": 15,
+            "col": 16,
+            "lit": "nca-service"
+          }
+        }
+      ]
+    }
+  ],
+  "fileTable": [
+    ".github/workflows/app-deploy.yml"
+  ],
+  "mask": [
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    }
+  ],
+  "steps": [
+    {
+      "type": "action",
+      "reference": {
+        "type": "repository",
+        "name": "actions/checkout",
+        "ref": "v4",
+        "repositoryType": "GitHub"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 22,
+        "col": 15,
+        "lit": "Checkout code"
+      },
+      "contextName": "__actions_checkout",
+      "condition": "success()",
+      "id": "4714dac0-f3d9-4663-b3f5-8b52e4b9f502",
+      "name": "__actions_checkout"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 25,
+        "col": 15,
+        "lit": "Get ECR login"
+      },
+      "contextName": "__run",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 26,
+              "col": 14,
+              "lit": "aws ecr get-login-password --region $env:AWS_REGION | docker login --username AWS --password-stdin \"$(aws sts get-caller-identity --query Account --output text).dkr.ecr.$env:AWS_REGION.amazonaws.com\"\n"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "2c475466-4065-4c5a-aa49-7e978853edf9",
+      "name": "__run"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 29,
+        "col": 15,
+        "lit": "Build image"
+      },
+      "contextName": "__run_2",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 30,
+              "col": 14,
+              "lit": "$env:IMAGE_TAG = $env:GITHUB_SHA.Substring(0,7)\n$env:ECR_URI = \"$(aws sts get-caller-identity --query Account --output text).dkr.ecr.$env:AWS_REGION.amazonaws.com/$env:ECR_REPOSITORY\"\ndocker build -t \"${env:ECR_URI}:${env:IMAGE_TAG}\" -t \"${env:ECR_URI}:latest\" ./app\necho \"ECR_URI=$env:ECR_URI\" >> $env:GITHUB_ENV\necho \"IMAGE_TAG=$env:IMAGE_TAG\" >> $env:GITHUB_ENV\n"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "a1200856-d639-4118-8ddc-87d911a53fe8",
+      "name": "__run_2"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 37,
+        "col": 15,
+        "lit": "Push image to ECR"
+      },
+      "contextName": "__run_3",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 38,
+              "col": 14,
+              "lit": "docker push \"${env:ECR_URI}:${env:IMAGE_TAG}\"\ndocker push \"${env:ECR_URI}:latest\"\n"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "ed3efb9b-ba46-4a8f-807a-6d90f2abcb5e",
+      "name": "__run_3"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 42,
+        "col": 15,
+        "lit": "Deploy new image to ECS"
+      },
+      "contextName": "__run_4",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 43,
+              "col": 14,
+              "lit": "# Fetch the current task definition, swap in the new image, register a new revision\n$taskDefArn = aws ecs describe-services --cluster $env:ECS_CLUSTER --services $env:ECS_SERVICE --query \"services[0].taskDefinition\" --output text\n$taskDefJson = aws ecs describe-task-definition --task-definition $taskDefArn --query \"taskDefinition\" | ConvertFrom-Json\n$taskDefJson.containerDefinitions[0].image = \"${env:ECR_URI}:${env:IMAGE_TAG}\"\n$newTaskDef = $taskDefJson | Select-Object -Property family,containerDefinitions,networkMode,requiresCompatibilities,cpu,memory,executionRoleArn\n$newTaskDef | ConvertTo-Json -Depth 20 | Out-File -Encoding utf8 new-task-def.json\n$newArn = aws ecs register-task-definition --cli-input-json file://new-task-def.json --query \"taskDefinition.taskDefinitionArn\" --output text\naws ecs update-service --cluster $env:ECS_CLUSTER --service $env:ECS_SERVICE --task-definition $newArn --force-new-deployment\n"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "adcaab69-c2d4-41ea-ac51-93b136b11318",
+      "name": "__run_4"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 53,
+        "col": 15,
+        "lit": "Wait for service to stabilize"
+      },
+      "contextName": "__run_5",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 54,
+              "col": 14,
+              "lit": "aws ecs wait services-stable --cluster $env:ECS_CLUSTER --services $env:ECS_SERVICE\n"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "dc36c713-ecfa-4a66-ac5f-101f49acbb2d",
+      "name": "__run_5"
+    }
+  ],
+  "variables": {
+    "Actions.EnableHttpRedirects": {
+      "value": "true"
+    },
+    "DistributedTask.AddWarningToNode12Action": {
+      "value": "true"
+    },
+    "DistributedTask.AddWarningToNode16Action": {
+      "value": "true"
+    },
+    "DistributedTask.AllowRunnerContainerHooks": {
+      "value": "true"
+    },
+    "DistributedTask.DeprecateStepOutputCommands": {
+      "value": "true"
+    },
+    "DistributedTask.DetailUntarFailure": {
+      "value": "true"
+    },
+    "DistributedTask.EnableCompositeActions": {
+      "value": "true"
+    },
+    "DistributedTask.EnableJobServerQueueTelemetry": {
+      "value": "true"
+    },
+    "DistributedTask.EnhancedAnnotations": {
+      "value": "true"
+    },
+    "DistributedTask.ForceGithubJavascriptActionsToNode16": {
+      "value": "true"
+    },
+    "DistributedTask.ForceGithubJavascriptActionsToNode20": {
+      "value": "true"
+    },
+    "DistributedTask.LogTemplateErrorsAsDebugMessages": {
+      "value": "true"
+    },
+    "DistributedTask.MarkJobAsFailedOnWorkerCrash": {
+      "value": "true"
+    },
+    "DistributedTask.NewActionMetadata": {
+      "value": "true"
+    },
+    "DistributedTask.UploadStepSummary": {
+      "value": "true"
+    },
+    "DistributedTask.UseActionArchiveCache": {
+      "value": "true"
+    },
+    "DistributedTask.UseWhich2": {
+      "value": "true"
+    },
+    "RunService.FixEmbeddedIssues": {
+      "value": "true"
+    },
+    "actions.runner.requirenode24": {
+      "value": "true"
+    },
+    "actions.runner.usenode24bydefault": {
+      "value": "true"
+    },
+    "actions.runner.warnonnode20": {
+      "value": "true"
+    },
+    "actions_add_check_run_id_to_job_context": {
+      "value": "true"
+    },
+    "actions_batch_action_resolution": {
+      "value": "false"
+    },
+    "actions_cache_mode": {
+      "value": "write"
+    },
+    "actions_container_action_runner_temp": {
+      "value": "true"
+    },
+    "actions_display_helpful_actions_download_errors": {
+      "value": "true"
+    },
+    "actions_runner_allow_artifacts_file": {
+      "value": "false"
+    },
+    "actions_runner_compare_workflow_parser": {
+      "value": "false"
+    },
+    "actions_runner_deprecate_linux_arm32": {
+      "value": "true"
+    },
+    "actions_runner_emit_composite_markers": {
+      "value": "true"
+    },
+    "actions_runner_kill_linux_arm32": {
+      "value": "false"
+    },
+    "actions_runner_node20_removal_date": {
+      "value": "September 23rd, 2026"
+    },
+    "actions_runner_node24_default_date": {
+      "value": "June 16th, 2026"
+    },
+    "actions_self_repository": {
+      "value": "true"
+    },
+    "actions_service_container_command": {
+      "value": "true"
+    },
+    "actions_set_orchestration_id_env_for_actions": {
+      "value": "true"
+    },
+    "actions_skip_retry_complete_job_upon_known_errors": {
+      "value": "true"
+    },
+    "actions_snapshot_preflight_hosted_runner_check": {
+      "value": "false"
+    },
+    "actions_snapshot_preflight_image_gen_pool_check": {
+      "value": "false"
+    },
+    "actions_use_bearer_token_for_codeload": {
+      "value": "false"
+    },
+    "actions_uses_cache_service_v2": {
+      "value": "true"
+    },
+    "github_token": {
+      "value": "***",
+      "isSecret": true
+    },
+    "system.from_run_service": {
+      "value": "true"
+    },
+    "system.github.job": {
+      "value": "build-and-deploy"
+    },
+    "system.github.launch_endpoint": {
+      "value": "https://launch.actions.githubusercontent.com"
+    },
+    "system.github.results_endpoint": {
+      "value": "https://results-receiver.actions.githubusercontent.com/"
+    },
+    "system.github.results_upload_with_sdk": {
+      "value": "true"
+    },
+    "system.github.token": {
+      "value": "***",
+      "isSecret": true
+    },
+    "system.github.token.permissions": {
+      "value": "{\"Contents\":\"read\",\"Metadata\":\"read\",\"Packages\":\"read\"}"
+    },
+    "system.orchestrationId": {
+      "value": "c25080e9-f111-4656-a3ca-db361782361d.build-and-deploy.__default"
+    },
+    "system.phaseDisplayName": {
+      "value": "build-and-deploy"
+    },
+    "system.runner.lowdiskspacethreshold": {
+      "value": "100"
+    },
+    "system.runnerEnvironment": {
+      "value": "self-hosted"
+    },
+    "system.runnerGroupName": {
+      "value": "Default"
+    }
+  },
+  "messageType": "RunnerJobRequest",
+  "plan": {
+    "scopeIdentifier": "00000000-0000-0000-0000-000000000000",
+    "planType": "actions",
+    "version": 0,
+    "planId": "c25080e9-f111-4656-a3ca-db361782361d",
+    "planGroup": null,
+    "artifactUri": null,
+    "artifactLocation": null,
+    "definition": null,
+    "owner": null
+  },
+  "timeline": {
+    "id": "c25080e9-f111-4656-a3ca-db361782361d",
+    "changeId": 0,
+    "location": null
+  },
+  "jobId": "0f77b158-6e8e-5f01-98b5-ab4be5da19d3",
+  "jobDisplayName": "build-and-deploy",
+  "jobName": "__default",
+  "requestId": 0,
+  "lockedUntil": "0001-01-01T00:00:00",
+  "resources": {
+    "endpoints": [
+      {
+        "data": {
+          "ServerId": "",
+          "ServerName": "",
+          "CacheServerUrl": "https://artifactcache.actions.githubusercontent.com/2WzNlrq9gB8vZ1VFT2Pk022Fg2NYtdQIW2zwJre3YGUQowYKVm/",
+          "FeedStreamUrl": "wss://results-receiver.actions.githubusercontent.com/_ws/ingest.sock",
+          "ResultsServiceUrl": "https://results-receiver.actions.githubusercontent.com/",
+          "PipelinesServiceUrl": "https://pipelinesghubeus15.actions.githubusercontent.com/2WzNlrq9gB8vZ1VFT2Pk022Fg2NYtdQIW2zwJre3YGUQowYKVm/",
+          "GenerateIdTokenUrl": "",
+          "ConnectivityChecks": "[\"https://broker.actions.githubusercontent.com/health\",\"https://token.actions.githubusercontent.com/ready\",\"https://run.actions.githubusercontent.com/health\"]",
+          "ConnectivityAndDNSChecks": ""
+        },
+        "name": "SystemVssConnection",
+        "url": "https://run-actions-2-azure-eastus.actions.githubusercontent.com/168/",
+        "authorization": {
+          "parameters": {
+            "AccessToken": "***"
+          },
+          "scheme": "OAuth"
+        },
+        "isShared": false,
+        "isReady": true
+      }
+    ]
+  },
+  "contextData": {
+    "github": {
+      "t": 2,
+      "d": [
+        {
+          "k": "ref",
+          "v": "refs/heads/main"
+        },
+        {
+          "k": "sha",
+          "v": "901dde365f38b71db60260830c5feda8f8ea77dd"
+        },
+        {
+          "k": "repository",
+          "v": "chenzinan869-web/case-study-1"
+        },
+        {
+          "k": "repository_owner",
+          "v": "chenzinan869-web"
+        },
+        {
+          "k": "repository_owner_id",
+          "v": "230564056"
+        },
+        {
+          "k": "repositoryUrl",
+          "v": "git://github.com/chenzinan869-web/case-study-1.git"
+        },
+        {
+          "k": "run_id",
+          "v": "36275330709"
+        },
+        {
+          "k": "run_number",
+          "v": "1"
+        },
+        {
+          "k": "retention_days",
+          "v": "90"
+        },
+        {
+          "k": "run_attempt",
+          "v": "1"
+        },
+        {
+          "k": "artifact_cache_size_limit",
+          "v": "10"
+        },
+        {
+          "k": "repository_visibility",
+          "v": "public"
+        },
+        {
+          "k": "actor_id",
+          "v": "230564056"
+        },
+        {
+          "k": "actor",
+          "v": "chenzinan869-web"
+        },
+        {
+          "k": "workflow",
+          "v": "App Build & Deploy"
+        },
+        {
+          "k": "head_ref",
+          "v": ""
+        },
+        {
+          "k": "base_ref",
+          "v": ""
+        },
+        {
+          "k": "event_name",
+          "v": "push"
+        },
+        {
+          "k": "server_url",
+          "v": "https://github.com"
+        },
+        {
+          "k": "api_url",
+          "v": "https://api.github.com"
+        },
+        {
+          "k": "graphql_url",
+          "v": "https://api.github.com/graphql"
+        },
+        {
+          "k": "ref_name",
+          "v": "main"
+        },
+        {
+          "k": "ref_protected",
+          "v": false
+        },
+        {
+          "k": "ref_type",
+          "v": "branch"
+        },
+        {
+          "k": "secret_source",
+          "v": "Actions"
+        },
+        {
+          "k": "event",
+          "v": {
+            "t": 2,
+            "d": [
+              {
+                "k": "after",
+                "v": "901dde365f38b71db60260830c5feda8f8ea77dd"
+              },
+              {
+                "k": "base_ref",
+                "v": null
+              },
+              {
+                "k": "before",
+                "v": "e9430d770534ddd0a4bb1f3de8659a18c83b6240"
+              },
+              {
+                "k": "commits",
+                "v": {
+                  "t": 1,
+                  "a": [
+                    {
+                      "t": 2,
+                      "d": [
+                        {
+                          "k": "author",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "chenzinan869@gmail.com"
+                              },
+                              {
+                                "k": "name",
+                                "v": "chenzinan869-web"
+                              },
+                              {
+                                "k": "username",
+                                "v": "chenzinan869-web"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "committer",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "chenzinan869@gmail.com"
+                              },
+                              {
+                                "k": "name",
+                                "v": "chenzinan869-web"
+                              },
+                              {
+                                "k": "username",
+                                "v": "chenzinan869-web"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "distinct",
+                          "v": true
+                        },
+                        {
+                          "k": "id",
+                          "v": "901dde365f38b71db60260830c5feda8f8ea77dd"
+                        },
+                        {
+                          "k": "message",
+                          "v": "Add app container files and GitHub Actions workflows"
+                        },
+                        {
+                          "k": "timestamp",
+                          "v": "2026-09-27T00:09:14+02:00"
+                        },
+                        {
+                          "k": "tree_id",
+                          "v": "b628e088c9bf150683fa818b1d170362423b1982"
+                        },
+                        {
+                          "k": "url",
+                          "v": "https://github.com/chenzinan869-web/case-study-1/commit/901dde365f38b71db60260830c5feda8f8ea77dd"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "compare",
+                "v": "https://github.com/chenzinan869-web/case-study-1/compare/e9430d770534...901dde365f38"
+              },
+              {
+                "k": "created",
+                "v": false
+              },
+              {
+                "k": "deleted",
+                "v": false
+              },
+              {
+                "k": "forced",
+                "v": false
+              },
+              {
+                "k": "head_commit",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "author",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "email",
+                            "v": "chenzinan869@gmail.com"
+                          },
+                          {
+                            "k": "name",
+                            "v": "chenzinan869-web"
+                          },
+                          {
+                            "k": "username",
+                            "v": "chenzinan869-web"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "committer",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "email",
+                            "v": "chenzinan869@gmail.com"
+                          },
+                          {
+                            "k": "name",
+                            "v": "chenzinan869-web"
+                          },
+                          {
+                            "k": "username",
+                            "v": "chenzinan869-web"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "distinct",
+                      "v": true
+                    },
+                    {
+                      "k": "id",
+                      "v": "901dde365f38b71db60260830c5feda8f8ea77dd"
+                    },
+                    {
+                      "k": "message",
+                      "v": "Add app container files and GitHub Actions workflows"
+                    },
+                    {
+                      "k": "timestamp",
+                      "v": "2026-09-27T00:09:14+02:00"
+                    },
+                    {
+                      "k": "tree_id",
+                      "v": "b628e088c9bf150683fa818b1d170362423b1982"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://github.com/chenzinan869-web/case-study-1/commit/901dde365f38b71db60260830c5feda8f8ea77dd"
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "pusher",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "email",
+                      "v": "chenzinan869@gmail.com"
+                    },
+                    {
+                      "k": "name",
+                      "v": "chenzinan869-web"
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "ref",
+                "v": "refs/heads/main"
+              },
+              {
+                "k": "repository",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "allow_forking",
+                      "v": true
+                    },
+                    {
+                      "k": "archive_url",
+                      "v": "https://api.github.com/repos/chenzinan869-web/case-study-1/{archive_format}{/ref}"
+                    },
+                    {
+                      "k": "archived",
+                      "v": false
+                    },
+                    {
+                      "k": "assignees_url",
+                      "v": "https://api.github.com/repos/chenzinan869-web/case-study-1/assignees{/user}"
+                    },
+                    {
+                      "k": "blobs_url",
+                      "v": "https://api.github.com/repos/chenzinan869-web/case-study-1/git/blobs{/sha}"
+                    },
+                    {
+                      "k": "branches_url",
+                      "v": "https://api.github.com/repos/chenzinan869-web/case-study-1/branches{/branch}"
+                    },
+                    {
+                      "k": "clone_url",
+                      "v": "https://github.com/chenzinan869-web/case-study-1.git"
+                    },
+                    {
+                      "k": "collaborators_url",
+                      "v": "https://api.github.com/repos/chenzinan869-web/case-study-1/collaborators{/collaborator}"
+                    },
+                    {
+                      "k": "comments_url",
+                      "v": "https://api.github.com/repos/chenzinan869-web/case-study-1/comments{/number}"
+                    },
+                    {
+                      "k": "commits_url",
+                      "v": "https://api.github.com/repos/chenzinan869-web/case-study-1/commits{/sha}"
+                    },
+                    {
+                      "k": "compare_url",
+                      "v": "https://api.github.com/repos/chenzinan869-web/case-study-1/compare/{base}...{head}"
+                    },
+                    {
+                      "k": "contents_url",
+                      "v": "https://api.github.com/repos/chenzinan869-web/case-study-1/contents/{+path}"
+                    },
+                    {
+                      "k": "contributors_url",
+                      "v": "https://api.github.com/repos/chenzinan869-web/case-study-1/contributors"
+                    },
+                    {
+                      "k": "created_at",
+                      "v": 1789377337.0
+                    },
+                    {
+                      "k": "default_branch",
+                      "v": "main"
+                    },
+                    {
+                      "k": "deployments_url",
+                      "v": "https://api.github.com/repos/chenzinan869-web/case-study-1/deployments"
+                    },
+                    {
+                      "k": "description",
+                      "v": null
+                    },
+                    {
+                      "k": "disabled",
+                      "v": false
+                    },
+                    {
+                      "k": "downloads_url",
+                      "v": "https://api.github.com/repos/chenzinan869-web/case-study-1/downloads"
+                    },
+                    {
+                      "k": "events_url",
+                      "v": "https://api.github.com/repos/chenzinan869-web/case-study-1/events"
+                    },
+                    {
+                      "k": "fork",
+                      "v": false
+                    },
+                    {
+                      "k": "forks",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "forks_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "forks_url",
+                      "v": "https://api.github.com/repos/chenzinan869-web/case-study-1/forks"
+                    },
+                    {
+                      "k": "full_name",
+                      "v": "chenzinan869-web/case-study-1"
+                    },
+                    {
+                      "k": "git_commits_url",
+                      "v": "https://api.github.com/repos/chenzinan869-web/case-study-1/git/commits{/sha}"
+                    },
+                    {
+                      "k": "git_refs_url",
+                      "v": "https://api.github.com/repos/chenzinan869-web/case-study-1/git/refs{/sha}"
+                    },
+                    {
+                      "k": "git_tags_url",
+                      "v": "https://api.github.com/repos/chenzinan869-web/case-study-1/git/tags{/sha}"
+                    },
+                    {
+                      "k": "git_url",
+                      "v": "git://github.com/chenzinan869-web/case-study-1.git"
+                    },
+                    {
+                      "k": "has_discussions",
+                      "v": false
+                    },
+                    {
+                      "k": "has_downloads",
+                      "v": true
+                    },
+                    {
+                      "k": "has_issues",
+                      "v": true
+                    },
+                    {
+                      "k": "has_pages",
+                      "v": false
+                    },
+                    {
+                      "k": "has_projects",
+                      "v": true
+                    },
+                    {
+                      "k": "has_pull_requests",
+                      "v": true
+                    },
+                    {
+                      "k": "has_wiki",
+                      "v": true
+                    },
+                    {
+                      "k": "homepage",
+                      "v": null
+                    },
+                    {
+                      "k": "hooks_url",
+                      "v": "https://api.github.com/repos/chenzinan869-web/case-study-1/hooks"
+                    },
+                    {
+                      "k": "html_url",
+                      "v": "https://github.com/chenzinan869-web/case-study-1"
+                    },
+                    {
+                      "k": "id",
+                      "v": 1369639068.0
+                    },
+                    {
+                      "k": "is_template",
+                      "v": false
+                    },
+                    {
+                      "k": "issue_comment_url",
+                      "v": "https://api.github.com/repos/chenzinan869-web/case-study-1/issues/comments{/number}"
+                    },
+                    {
+                      "k": "issue_events_url",
+                      "v": "https://api.github.com/repos/chenzinan869-web/case-study-1/issues/events{/number}"
+                    },
+                    {
+                      "k": "issues_url",
+                      "v": "https://api.github.com/repos/chenzinan869-web/case-study-1/issues{/number}"
+                    },
+                    {
+                      "k": "keys_url",
+                      "v": "https://api.github.com/repos/chenzinan869-web/case-study-1/keys{/key_id}"
+                    },
+                    {
+                      "k": "labels_url",
+                      "v": "https://api.github.com/repos/chenzinan869-web/case-study-1/labels{/name}"
+                    },
+                    {
+                      "k": "language",
+                      "v": "HCL"
+                    },
+                    {
+                      "k": "languages_url",
+                      "v": "https://api.github.com/repos/chenzinan869-web/case-study-1/languages"
+                    },
+                    {
+                      "k": "license",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "key",
+                            "v": "mit"
+                          },
+                          {
+                            "k": "name",
+                            "v": "MIT License"
+                          },
+                          {
+                            "k": "node_id",
+                            "v": "MDc6TGljZW5zZTEz"
+                          },
+                          {
+                            "k": "spdx_id",
+                            "v": "MIT"
+                          },
+                          {
+                            "k": "url",
+                            "v": "https://api.github.com/licenses/mit"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "master_branch",
+                      "v": "main"
+                    },
+                    {
+                      "k": "merges_url",
+                      "v": "https://api.github.com/repos/chenzinan869-web/case-study-1/merges"
+                    },
+                    {
+                      "k": "milestones_url",
+                      "v": "https://api.github.com/repos/chenzinan869-web/case-study-1/milestones{/number}"
+                    },
+                    {
+                      "k": "mirror_url",
+                      "v": null
+                    },
+                    {
+                      "k": "name",
+                      "v": "case-study-1"
+                    },
+                    {
+                      "k": "node_id",
+                      "v": "R_kgDOUaMInA"
+                    },
+                    {
+                      "k": "notifications_url",
+                      "v": "https://api.github.com/repos/chenzinan869-web/case-study-1/notifications{?since,all,participating}"
+                    },
+                    {
+                      "k": "open_issues",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "open_issues_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "owner",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "avatar_url",
+                            "v": "https://avatars.githubusercontent.com/u/230564056?v=4"
+                          },
+                          {
+                            "k": "email",
+                            "v": "chenzinan869@gmail.com"
+                          },
+                          {
+                            "k": "events_url",
+                            "v": "https://api.github.com/users/chenzinan869-web/events{/privacy}"
+                          },
+                          {
+                            "k": "followers_url",
+                            "v": "https://api.github.com/users/chenzinan869-web/followers"
+                          },
+                          {
+                            "k": "following_url",
+                            "v": "https://api.github.com/users/chenzinan869-web/following{/other_user}"
+                          },
+                          {
+                            "k": "gists_url",
+                            "v": "https://api.github.com/users/chenzinan869-web/gists{/gist_id}"
+                          },
+                          {
+                            "k": "gravatar_id",
+                            "v": ""
+                          },
+                          {
+                            "k": "html_url",
+                            "v": "https://github.com/chenzinan869-web"
+                          },
+                          {
+                            "k": "id",
+                            "v": 230564056.0
+                          },
+                          {
+                            "k": "login",
+                            "v": "chenzinan869-web"
+                          },
+                          {
+                            "k": "name",
+                            "v": "chenzinan869-web"
+                          },
+                          {
+                            "k": "node_id",
+                            "v": "U_kgDODb4g2A"
+                          },
+                          {
+                            "k": "organizations_url",
+                            "v": "https://api.github.com/users/chenzinan869-web/orgs"
+                          },
+                          {
+                            "k": "received_events_url",
+                            "v": "https://api.github.com/users/chenzinan869-web/received_events"
+                          },
+                          {
+                            "k": "repos_url",
+                            "v": "https://api.github.com/users/chenzinan869-web/repos"
+                          },
+                          {
+                            "k": "site_admin",
+                            "v": false
+                          },
+                          {
+                            "k": "starred_url",
+                            "v": "https://api.github.com/users/chenzinan869-web/starred{/owner}{/repo}"
+                          },
+                          {
+                            "k": "subscriptions_url",
+                            "v": "https://api.github.com/users/chenzinan869-web/subscriptions"
+                          },
+                          {
+                            "k": "type",
+                            "v": "User"
+                          },
+                          {
+                            "k": "url",
+                            "v": "https://api.github.com/users/chenzinan869-web"
+                          },
+                          {
+                            "k": "user_view_type",
+                            "v": "public"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "private",
+                      "v": false
+                    },
+                    {
+                      "k": "pull_request_creation_policy",
+                      "v": "all"
+                    },
+                    {
+                      "k": "pulls_url",
+                      "v": "https://api.github.com/repos/chenzinan869-web/case-study-1/pulls{/number}"
+                    },
+                    {
+                      "k": "pushed_at",
+                      "v": 1790460552.0
+                    },
+                    {
+                      "k": "releases_url",
+                      "v": "https://api.github.com/repos/chenzinan869-web/case-study-1/releases{/id}"
+                    },
+                    {
+                      "k": "size",
+                      "v": 183413.0
+                    },
+                    {
+                      "k": "ssh_url",
+                      "v": "git@github.com:chenzinan869-web/case-study-1.git"
+                    },
+                    {
+                      "k": "stargazers",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "stargazers_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "stargazers_url",
+                      "v": "https://api.github.com/repos/chenzinan869-web/case-study-1/stargazers"
+                    },
+                    {
+                      "k": "statuses_url",
+                      "v": "https://api.github.com/repos/chenzinan869-web/case-study-1/statuses/{sha}"
+                    },
+                    {
+                      "k": "subscribers_url",
+                      "v": "https://api.github.com/repos/chenzinan869-web/case-study-1/subscribers"
+                    },
+                    {
+                      "k": "subscription_url",
+                      "v": "https://api.github.com/repos/chenzinan869-web/case-study-1/subscription"
+                    },
+                    {
+                      "k": "svn_url",
+                      "v": "https://github.com/chenzinan869-web/case-study-1"
+                    },
+                    {
+                      "k": "tags_url",
+                      "v": "https://api.github.com/repos/chenzinan869-web/case-study-1/tags"
+                    },
+                    {
+                      "k": "teams_url",
+                      "v": "https://api.github.com/repos/chenzinan869-web/case-study-1/teams"
+                    },
+                    {
+                      "k": "topics",
+                      "v": {
+                        "t": 1
+                      }
+                    },
+                    {
+                      "k": "trees_url",
+                      "v": "https://api.github.com/repos/chenzinan869-web/case-study-1/git/trees{/sha}"
+                    },
+                    {
+                      "k": "updated_at",
+                      "v": "2026-09-26T13:22:44Z"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://api.github.com/repos/chenzinan869-web/case-study-1"
+                    },
+                    {
+                      "k": "visibility",
+                      "v": "public"
+                    },
+                    {
+                      "k": "watchers",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "watchers_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "web_commit_signoff_required",
+                      "v": false
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "sender",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "avatar_url",
+                      "v": "https://avatars.githubusercontent.com/u/230564056?v=4"
+                    },
+                    {
+                      "k": "events_url",
+                      "v": "https://api.github.com/users/chenzinan869-web/events{/privacy}"
+                    },
+                    {
+                      "k": "followers_url",
+                      "v": "https://api.github.com/users/chenzinan869-web/followers"
+                    },
+                    {
+                      "k": "following_url",
+                      "v": "https://api.github.com/users/chenzinan869-web/following{/other_user}"
+                    },
+                    {
+                      "k": "gists_url",
+                      "v": "https://api.github.com/users/chenzinan869-web/gists{/gist_id}"
+                    },
+                    {
+                      "k": "gravatar_id",
+                      "v": ""
+                    },
+                    {
+                      "k": "html_url",
+                      "v": "https://github.com/chenzinan869-web"
+                    },
+                    {
+                      "k": "id",
+                      "v": 230564056.0
+                    },
+                    {
+                      "k": "login",
+                      "v": "chenzinan869-web"
+                    },
+                    {
+                      "k": "node_id",
+                      "v": "U_kgDODb4g2A"
+                    },
+                    {
+                      "k": "organizations_url",
+                      "v": "https://api.github.com/users/chenzinan869-web/orgs"
+                    },
+                    {
+                      "k": "received_events_url",
+                      "v": "https://api.github.com/users/chenzinan869-web/received_events"
+                    },
+                    {
+                      "k": "repos_url",
+                      "v": "https://api.github.com/users/chenzinan869-web/repos"
+                    },
+                    {
+                      "k": "site_admin",
+                      "v": false
+                    },
+                    {
+                      "k": "starred_url",
+                      "v": "https://api.github.com/users/chenzinan869-web/starred{/owner}{/repo}"
+                    },
+                    {
+                      "k": "subscriptions_url",
+                      "v": "https://api.github.com/users/chenzinan869-web/subscriptions"
+                    },
+                    {
+                      "k": "type",
+                      "v": "User"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://api.github.com/users/chenzinan869-web"
+                    },
+                    {
+                      "k": "user_view_type",
+                      "v": "public"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "k": "workflow_ref",
+          "v": "chenzinan869-web/case-study-1/.github/workflows/app-deploy.yml@refs/heads/main"
+        },
+        {
+          "k": "workflow_sha",
+          "v": "901dde365f38b71db60260830c5feda8f8ea77dd"
+        },
+        {
+          "k": "repository_id",
+          "v": "1369639068"
+        },
+        {
+          "k": "triggering_actor",
+          "v": "chenzinan869-web"
+        }
+      ]
+    },
+    "inputs": {
+      "t": 2
+    },
+    "job": {
+      "t": 2,
+      "d": [
+        {
+          "k": "check_run_id",
+          "v": 108496859935.0
+        },
+        {
+          "k": "workflow_ref",
+          "v": "chenzinan869-web/case-study-1/.github/workflows/app-deploy.yml@refs/heads/main"
+        },
+        {
+          "k": "workflow_sha",
+          "v": "901dde365f38b71db60260830c5feda8f8ea77dd"
+        },
+        {
+          "k": "workflow_repository",
+          "v": "chenzinan869-web/case-study-1"
+        },
+        {
+          "k": "workflow_file_path",
+          "v": ".github/workflows/app-deploy.yml"
+        }
+      ]
+    },
+    "matrix": null,
+    "needs": {
+      "t": 2
+    },
+    "strategy": {
+      "t": 2,
+      "d": [
+        {
+          "k": "fail-fast",
+          "v": true
+        },
+        {
+          "k": "job-index",
+          "v": 0.0
+        },
+        {
+          "k": "job-total",
+          "v": 1.0
+        },
+        {
+          "k": "max-parallel",
+          "v": 1.0
+        }
+      ]
+    },
+    "vars": {
+      "t": 2
+    }
+  },
+  "billingOwnerId": "U_kgDODb4g2A"
+}
+[2026-09-26 22:09:25Z INFO JobRunner] Job ID 0f77b158-6e8e-5f01-98b5-ab4be5da19d3
+[2026-09-26 22:09:25Z INFO ConfigurationStore] currentAssemblyLocation: C:\Users\chenz\Downloads\terraform-nca\actions-runner\bin\Runner.Worker.dll
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Bin': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner\bin'
+[2026-09-26 22:09:25Z INFO ConfigurationStore] binPath: C:\Users\chenz\Downloads\terraform-nca\actions-runner\bin
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Bin': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner\bin'
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Root': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner'
+[2026-09-26 22:09:25Z INFO ConfigurationStore] RootFolder: C:\Users\chenz\Downloads\terraform-nca\actions-runner
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Bin': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner\bin'
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Root': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner'
+[2026-09-26 22:09:25Z INFO HostContext] Well known config file 'Runner': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner\.runner'
+[2026-09-26 22:09:25Z INFO ConfigurationStore] ConfigFilePath: C:\Users\chenz\Downloads\terraform-nca\actions-runner\.runner
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Bin': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner\bin'
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Root': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner'
+[2026-09-26 22:09:25Z INFO HostContext] Well known config file 'MigratedRunner': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner\.runner_migrated'
+[2026-09-26 22:09:25Z INFO ConfigurationStore] MigratedConfigFilePath: C:\Users\chenz\Downloads\terraform-nca\actions-runner\.runner_migrated
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Bin': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner\bin'
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Root': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner'
+[2026-09-26 22:09:25Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner\.credentials'
+[2026-09-26 22:09:25Z INFO ConfigurationStore] CredFilePath: C:\Users\chenz\Downloads\terraform-nca\actions-runner\.credentials
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Bin': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner\bin'
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Root': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner'
+[2026-09-26 22:09:25Z INFO HostContext] Well known config file 'MigratedCredentials': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner\.credentials_migrated'
+[2026-09-26 22:09:25Z INFO ConfigurationStore] MigratedCredFilePath: C:\Users\chenz\Downloads\terraform-nca\actions-runner\.credentials_migrated
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Bin': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner\bin'
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Root': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner'
+[2026-09-26 22:09:25Z INFO HostContext] Well known config file 'Service': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner\.service'
+[2026-09-26 22:09:25Z INFO ConfigurationStore] ServiceConfigFilePath: C:\Users\chenz\Downloads\terraform-nca\actions-runner\.service
+[2026-09-26 22:09:25Z INFO ConfigurationStore] Read setting file: 398 chars
+[2026-09-26 22:09:25Z INFO JobRunner] Initializing launch client
+[2026-09-26 22:09:25Z INFO JobServerQueue] Initializing results client
+[2026-09-26 22:09:25Z INFO ResultServer] Creating websocket client ...wss://results-receiver.actions.githubusercontent.com/_ws/ingest.sock
+[2026-09-26 22:09:25Z INFO ResultServer] Attempting to start websocket client with delay 00:00:00.
+[2026-09-26 22:09:25Z INFO JobServerQueue] Start process web console line queue.
+[2026-09-26 22:09:25Z INFO JobServerQueue] Start process file upload queue.
+[2026-09-26 22:09:25Z INFO JobServerQueue] Start results file upload queue.
+[2026-09-26 22:09:25Z INFO JobServerQueue] Starting results-based upload queue...
+[2026-09-26 22:09:25Z INFO JobServerQueue] Start process timeline update queue.
+[2026-09-26 22:09:25Z INFO ExecutionContext] Initializing Job context
+[2026-09-26 22:09:25Z INFO ExecutionContext] Initialize GitHub context
+[2026-09-26 22:09:25Z INFO ExecutionContext] Initialize Env context
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Bin': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner\bin'
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Root': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner'
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Diag': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner\_diag'
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Bin': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner\bin'
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Root': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner'
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Diag': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner\_diag'
+[2026-09-26 22:09:25Z INFO JobRunner] Starting the job execution context.
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Bin': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner\bin'
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Root': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner'
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Work': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner\_work'
+[2026-09-26 22:09:25Z INFO JobRunner] Validating directory permissions for: 'C:\Users\chenz\Downloads\terraform-nca\actions-runner\_work'
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Bin': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner\bin'
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Root': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner'
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Work': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner\_work'
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Tools': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner\_work\_tool'
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Bin': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner\bin'
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Root': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner'
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Work': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner\_work'
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Temp': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner\_work\_temp'
+[2026-09-26 22:09:25Z INFO JobRunner] Getting job extension.
+[2026-09-26 22:09:25Z INFO JobRunner] Initialize job. Getting all job steps.
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Bin': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner\bin'
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Root': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner'
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Diag': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner\_diag'
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Bin': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner\bin'
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Root': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner'
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Diag': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner\_diag'
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Bin': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner\bin'
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Root': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner'
+[2026-09-26 22:09:25Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner\.credentials'
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Bin': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner\bin'
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Root': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner'
+[2026-09-26 22:09:25Z INFO HostContext] Well known config file 'SetupInfo': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner\.setup_info'
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Bin': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner\bin'
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Root': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner'
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Work': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner\_work'
+[2026-09-26 22:09:25Z INFO PipelineDirectoryManager] Loading tracking config if exists: C:\Users\chenz\Downloads\terraform-nca\actions-runner\_work\_PipelineMapping\chenzinan869-web/case-study-1\PipelineFolder.json
+[2026-09-26 22:09:25Z INFO PipelineDirectoryManager] Creating a new tracking config file.
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Bin': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner\bin'
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Root': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner'
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Work': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner\_work'
+[2026-09-26 22:09:25Z INFO PipelineDirectoryManager] Creating pipeline directory.
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Bin': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner\bin'
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Root': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner'
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Work': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner\_work'
+[2026-09-26 22:09:25Z INFO PipelineDirectoryManager] Creating workspace directory.
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Bin': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner\bin'
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Root': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner'
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Work': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner\_work'
+[2026-09-26 22:09:25Z INFO JobExtension] Downloading actions
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Bin': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner\bin'
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Root': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner'
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Work': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner\_work'
+[2026-09-26 22:09:25Z INFO HostContext] Well known directory 'Actions': 'C:\Users\chenz\Downloads\terraform-nca\actions-runner\_work\_actions'
+[2026-09-26 22:09:25Z INFO Worker] Listening for cancel message from the channel.
+[2026-09-26 22:09:25Z INFO Worker] Waiting for the job to complete or for a cancel message from the channel.

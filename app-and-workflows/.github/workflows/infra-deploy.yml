@@ -1,0 +1,40 @@
+name: Infra Plan & Apply
+
+on:
+  pull_request:
+    paths:
+      - "*.tf"
+  push:
+    branches: [main]
+    paths:
+      - "*.tf"
+  workflow_dispatch: {} # allows manually triggering a run for the demo
+
+jobs:
+  terraform:
+    runs-on: self-hosted # REQ-NCA-P1-07: self-hosted runner
+    env:
+      AWS_PROFILE: nca
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Terraform format check
+        run: terraform fmt -check -recursive
+
+      - name: Terraform init
+        run: terraform init
+
+      - name: Terraform validate
+        run: terraform validate
+
+      - name: Terraform plan
+        run: terraform plan -out=tfplan
+        # On a pull request this just shows what would change, for review.
+
+      - name: Terraform apply
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        run: terraform apply -auto-approve tfplan
+        # Only applies automatically on a direct push/merge to main —
+        # pull requests only get a plan, never an auto-apply.

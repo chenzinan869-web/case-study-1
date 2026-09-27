@@ -1,0 +1,11 @@
+﻿{
+  "agentId": 2,
+  "agentName": "ZINAN",
+  "poolId": 1,
+  "poolName": "Default",
+  "serverUrl": "https://pipelinesghubeus15.actions.githubusercontent.com/2WzNlrq9gB8vZ1VFT2Pk022Fg2NYtdQIW2zwJre3YGUQowYKVm/",
+  "gitHubUrl": "https://github.com/chenzinan869-web/case-study-1",
+  "workFolder": "_work",
+  "useV2Flow": true,
+  "serverUrlV2": "https://broker.actions.githubusercontent.com/"
+}
